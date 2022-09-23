@@ -1,0 +1,84 @@
+@import "styles/variables.scss";
+
+.header_wrapper {
+  // position: sticky;
+  // top: 0;
+  // z-index: 9998;
+  background: $neutral-700;
+  backdrop-filter: blur(12px);
+
+  &_container {
+    height: 100px;
+
+    max-width: $max-width;
+    margin: auto;
+    width: $section-width;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .info {
+      background: $neutral-500;
+      padding: 10px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .nav_links {
+      display: flex;
+      align-items: center;
+      gap: 44px;
+
+      .link {
+        color: $neutral-100;
+        font-size: $fs-base;
+        line-height: $lh-base;
+        font-weight: $fw-semibold;
+        cursor: pointer;
+        text-decoration: none;
+        position: relative;
+        transition: all 0.3s ease-out;
+
+        &:hover {
+          color: $primary-500;
+        }
+
+        &::after {
+          background: none repeat scroll 0 0 transparent;
+          bottom: -4px;
+          content: "";
+          display: block;
+          height: 2px;
+          left: 50%;
+          position: absolute;
+          background: $primary-500;
+          transition: width 0.3s ease 0s, left 0.3s ease 0s;
+          width: 0;
+        }
+
+        &:hover::after {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .header_wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 9998;
+
+    &_container {
+      .nav_links {
+        display: none;
+      }
+    }
+  }
+}

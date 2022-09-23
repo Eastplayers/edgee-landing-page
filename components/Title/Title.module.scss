@@ -1,0 +1,26 @@
+@import "styles/variables.scss";
+
+.main_title {
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: $fw-bold;
+  color: $neutral-700;
+  width: 45%;
+  text-align: center;
+  padding-bottom: 16px;
+}
+
+@media screen and (max-width: $mobile) {
+  .main_title {
+    font-size: 24px;
+    line-height: 35px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: $small-mobile) {
+  .main_title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}

@@ -1,0 +1,148 @@
+@import "styles/variables.scss";
+
+.footer_wrapper {
+  background-image: url("../../public/images/footer-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: relative;
+
+  &_container {
+    max-width: $max-width;
+    margin: auto;
+    width: $section-width;
+    padding: 46px 0px;
+
+    display: flex;
+    justify-content: space-between;
+
+    &_form {
+      position: relative;
+
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 124px;
+
+      .icon_one {
+        position: absolute;
+        bottom: 70px;
+        left: 80px;
+      }
+
+      .form {
+        width: 560px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        &_item {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+
+          input,
+          textarea {
+            padding: 16px;
+            border-radius: 12px;
+          }
+        }
+      }
+
+      .copyright {
+        font-size: $fs-xs;
+        line-height: $lh-xs;
+        font-weight: $fw-regular;
+        color: $white;
+        text-align: right;
+      }
+    }
+
+    &_social {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      width: 320px;
+
+      .title {
+        font-size: 32px;
+        font-weight: $fw-bold;
+        color: $white;
+      }
+
+      .text {
+        font-size: $fs-base;
+        line-height: $lh-base;
+        font-weight: $fw-regular;
+        color: $neutral-100;
+      }
+
+      .social_icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .social {
+        background: $neutral-500;
+      }
+
+      .phone {
+        background: $primary-400;
+      }
+
+      .phone_number {
+        font-size: $fs-base;
+        line-height: $lh-base;
+        font-weight: $fw-semibold;
+        color: $white;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $big-laptop) {
+  .footer_wrapper {
+    background-position: 50% 100%;
+  }
+}
+
+@media screen and (max-width: $big-tablet) {
+  .footer_wrapper {
+    background-position: 10% 100%;
+
+    &_container {
+      &_form {
+        .icon_one {
+          display: none;
+        }
+      }
+    }
+
+    .icon_two {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .footer_wrapper {
+    background-position: 35% 100%;
+
+    &_container {
+      flex-direction: column;
+      gap: 2rem;
+
+      &_form {
+        .form {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

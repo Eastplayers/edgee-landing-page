@@ -1,0 +1,101 @@
+@import "styles/variables.scss";
+
+.intro_wrapper {
+  background: $neutral-700;
+
+  &_container {
+    max-width: $max-width;
+    margin: auto;
+    width: $section-width;
+    padding: 3rem 0;
+
+    .main_title {
+      font-size: 44px;
+      line-height: 56px;
+      letter-spacing: 0.02em;
+      font-weight: $fw-bold;
+      color: $white;
+    }
+
+    .icon {
+      position: absolute;
+      top: 0;
+      left: 170px;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .intro_wrapper {
+    &_container {
+    }
+  }
+}
+
+@media screen and (max-width: $big-tablet) {
+  .intro_wrapper {
+    &_container {
+      .main_title {
+        font-size: 34px;
+        line-height: 46px;
+      }
+      .icon {
+        top: -32px;
+        left: 140px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .intro_wrapper {
+    &_container {
+      .icon {
+        top: 56px;
+        left: 260px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .intro_wrapper {
+    &_container {
+      .main_title {
+        font-size: 24px;
+        line-height: 28px;
+      }
+      .icon {
+        top: 5px;
+        left: 135px;
+        span {
+          img {
+            width: 120px !important;
+            height: 120px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $small-mobile) {
+  .intro_wrapper {
+    &_container {
+      .main_title {
+        font-size: 20px;
+        line-height: 24px;
+      }
+      .icon {
+        top: 5px;
+        left: 130px;
+        span {
+          img {
+            width: 90px !important;
+            height: 90px !important;
+          }
+        }
+      }
+    }
+  }
+}
