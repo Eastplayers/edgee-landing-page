@@ -7,9 +7,11 @@ import { isEmpty } from "lodash";
 import Button from "components/Button/Button";
 import Footer from "components/Footer/Footer";
 import IntroSection from "components/SectionUI/IntroSection/IntroSection";
-import ParticipateSection from "components/SectionUI/AboutSection/AboutSection";
-import ChallengeSection from "components/SectionUI/ChallengeSection/ChallengeSection";
-import CompetitionSection from "components/SectionUI/CompetitionSection/CompetitionSection";
+import About from "components/SectionUI/AboutSection/AboutSection";
+
+// import ParticipateSection from "components/SectionUI/AboutSection/AboutSection";
+// import ChallengeSection from "components/SectionUI/ChallengeSection/ChallengeSection";
+// import CompetitionSection from "components/SectionUI/CompetitionSection/CompetitionSection";
 
 import styles from "styles/pages/Main.module.scss";
 
@@ -21,10 +23,7 @@ const Home: NextPage = () => {
       </Head>
       <IntroSection />
       <div className={styles.home_page}>
-        {/* <ParticipateSection />
-        <ChallengeSection />
-        <CompetitionSection /> */}
-        <div>hello</div>
+        <About />
       </div>
       <Footer />
     </>

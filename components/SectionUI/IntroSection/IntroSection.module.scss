@@ -20,14 +20,7 @@
     .icon {
       position: absolute;
       top: 0;
-      left: 170px;
-    }
-  }
-}
-
-@media screen and (max-width: $laptop) {
-  .intro_wrapper {
-    &_container {
+      left: 210px;
     }
   }
 }
@@ -40,8 +33,13 @@
         line-height: 46px;
       }
       .icon {
-        top: -32px;
-        left: 140px;
+        left: 160px;
+        span {
+          img {
+            width: 150px !important;
+            height: 150px !important;
+          }
+        }
       }
     }
   }
@@ -51,8 +49,14 @@
   .intro_wrapper {
     &_container {
       .icon {
-        top: 56px;
-        left: 260px;
+        top: 60px;
+        left: 270px;
+        span {
+          img {
+            width: 180px !important;
+            height: 180px !important;
+          }
+        }
       }
     }
   }
@@ -66,12 +70,12 @@
         line-height: 28px;
       }
       .icon {
-        top: 5px;
+        top: 0;
         left: 135px;
         span {
           img {
-            width: 120px !important;
-            height: 120px !important;
+            width: 100px !important;
+            height: 100px !important;
           }
         }
       }
@@ -87,12 +91,31 @@
         line-height: 24px;
       }
       .icon {
-        top: 5px;
-        left: 130px;
+        left: 115px;
         span {
           img {
             width: 90px !important;
             height: 90px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .intro_wrapper {
+    &_container {
+      .main_title {
+        font-size: 16px;
+      }
+      .icon {
+        top: -10px;
+        left: 90px;
+        span {
+          img {
+            width: 65px !important;
+            height: 65px !important;
           }
         }
       }

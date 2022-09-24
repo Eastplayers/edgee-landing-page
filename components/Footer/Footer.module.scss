@@ -29,7 +29,7 @@
       .icon_one {
         position: absolute;
         bottom: 70px;
-        left: 80px;
+        left: 260px;
       }
 
       .form {
@@ -108,7 +108,13 @@
 
 @media screen and (max-width: $big-laptop) {
   .footer_wrapper {
-    background-position: 50% 100%;
+    background-position: 10% 20%;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .footer_wrapper {
+    background-position: 10% 100%;
   }
 }
 

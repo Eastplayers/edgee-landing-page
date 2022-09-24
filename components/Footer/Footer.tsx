@@ -166,7 +166,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="absolute top-10 2xl:right-[680px] right-20 lg:block hidden">
+      <div className="absolute top-10 2xl:right-[620px] right-[50px] lg:block hidden">
         <motion.div
           animate={{ y: [0, 520, 0] }}
           transition={{ duration: 10, repeat: Infinity }}

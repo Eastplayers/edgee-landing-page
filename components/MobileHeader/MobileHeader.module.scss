@@ -8,11 +8,9 @@
   opacity: 0;
   transform: translateX(-2000px);
   z-index: 9998;
-  height: 100vh;
+  height: 110vh;
   width: 100%;
-  background-image: url("../../public/images/menuside-bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: $neutral-700;
   backdrop-filter: blur(12px);
 
   transition-property: all;
