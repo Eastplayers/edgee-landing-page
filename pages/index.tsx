@@ -8,13 +8,10 @@ import Button from "components/Button/Button";
 import Footer from "components/Footer/Footer";
 import IntroSection from "components/SectionUI/IntroSection/IntroSection";
 import About from "components/SectionUI/AboutSection/AboutSection";
-
-// import ParticipateSection from "components/SectionUI/AboutSection/AboutSection";
-// import ChallengeSection from "components/SectionUI/ChallengeSection/ChallengeSection";
-// import CompetitionSection from "components/SectionUI/CompetitionSection/CompetitionSection";
+import DifferenceSection from "components/SectionUI/DifferenceSection/DifferenceSection";
+import SolutionSection from "components/SectionUI/SolutionSection/SolutionSection";
 
 import styles from "styles/pages/Main.module.scss";
-import DifferenceSection from "components/SectionUI/DifferenceSection/DifferenceSection";
 
 const Home: NextPage = () => {
   return (
@@ -26,6 +23,7 @@ const Home: NextPage = () => {
       <div className={styles.home_page}>
         <About />
         <DifferenceSection />
+        <SolutionSection />
       </div>
       <Footer />
     </>

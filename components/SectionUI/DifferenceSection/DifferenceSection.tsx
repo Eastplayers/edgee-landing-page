@@ -23,13 +23,13 @@ const DifferenceSection = () => {
         <div className="flex justify-center">
           <Title mainTitle="Dễ dàng sỡ hữu và phát triển kênh thương mại riêng biệt sau này" />
         </div>
-        <div className="flex flex-col gap-16 mt-3">
+        <div className="flex flex-col gap-16 mt-4">
           <div className="flex flex-col items-center gap-4">
             <div className={classNames(styles.title, styles.title_one)}>
               Sử dụng các nền tảng có sẵn khác xây kênh
             </div>
 
-            <div className="flex items-center md:flex-row flex-col md:gap-0 gap-11">
+            <div className="flex items-center md:flex-row flex-col md:gap-0 gap-11 w-full justify-between">
               <div className="flex flex-col gap-1 items-center lg:w-60 w-full">
                 <Image src={StepOne} alt="StepOne" />
                 <div className={styles.content}>Xây dựng kênh online</div>
@@ -62,8 +62,7 @@ const DifferenceSection = () => {
                 <div>Sử dụng nền tảng Edgee xây kênh</div>
               </div>
             </div>
-
-            <div className="flex items-center md:flex-row flex-col md:gap-0 gap-11">
+            <div className="flex items-center md:flex-row flex-col md:gap-0 gap-11 w-full justify-between">
               <div className="flex flex-col gap-1 lg:w-60 w-full">
                 <Image src={StepFour} alt="StepFour" />
                 <div className={styles.content}>Xây dựng kênh online</div>

@@ -1,0 +1,143 @@
+@import "styles/variables.scss";
+
+.solution_wrapper {
+  margin-top: 60px;
+
+  &_title {
+    color: $primary-500;
+    font-size: $fs-xl;
+    line-height: $lh-xl;
+    font-weight: $fw-bold;
+  }
+
+  &_sub_title {
+    color: $neutral-700;
+    font-size: $fs-xl;
+    line-height: $lh-xl;
+    font-weight: $fw-medium;
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    font-size: $fs-base;
+    line-height: $lh-base;
+    color: $neutral-600;
+
+    span {
+      font-weight: $fw-bold;
+    }
+
+    ul {
+      list-style-type: disc;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+
+  &_btn {
+    margin-top: 1rem;
+    width: max-content;
+    font-weight: $fw-bold;
+
+    color: $neutral-700;
+    border-color: $neutral-700;
+    background: transparent;
+
+    &:hover {
+      color: $primary-500;
+      border-color: $primary-500;
+      background: transparent;
+    }
+  }
+
+  &_e_omni {
+    max-width: $max-width;
+    margin: auto;
+    width: $section-width;
+
+    padding-bottom: 60px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  &_e_store {
+    background: #f6faff;
+
+    .container {
+      max-width: $max-width;
+      margin: auto;
+      width: $section-width;
+
+      padding: 60px 0;
+
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+  }
+
+  &_e_app {
+    max-width: $max-width;
+    margin: auto;
+    width: $section-width;
+
+    padding: 60px 0;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  &_e_cdp {
+    background: #f6faff;
+
+    .container {
+      max-width: $max-width;
+      margin: auto;
+      width: $section-width;
+
+      padding: 60px 0;
+
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .solution_wrapper {
+    &_e_omni {
+      flex-direction: column;
+    }
+
+    &_e_store {
+      .container {
+        flex-direction: column;
+      }
+    }
+
+    &_e_app {
+      flex-direction: column;
+    }
+
+    &_e_cdp {
+      .container {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .solution_wrapper {
+    &_btn {
+      width: 100%;
+    }
+  }
+}

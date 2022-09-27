@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import Button from "components/Button/Button";
 
-import IntroImage from "public/images/intro-image.png";
+import IntroImage from "public/images/intro-image.svg";
 import IntroIcon from "public/icons/intro-icon.svg";
 
 import styles from "./IntroSection.module.scss";

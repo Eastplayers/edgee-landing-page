@@ -12,7 +12,7 @@ import IconTwo from "public/images/about/icon-two.svg";
 import IconThree from "public/images/about/icon-three.svg";
 import IconFour from "public/images/about/icon-four.svg";
 import IconQuote from "public/images/about/quote.svg";
-import Human from "public/images/about/image.png";
+import Human from "public/images/about/image.svg";
 
 import styles from "./AboutSection.module.scss";
 

@@ -8,8 +8,8 @@ import Button from "components/Button/Button";
 import Facebook from "public/icons/facebook.svg";
 import Youtube from "public/icons/youtube.svg";
 import Phone from "public/icons/phone.svg";
-import IconOne from "public/images/footer-icon-one.png";
-import IconTwo from "public/images/footer-icon-two.png";
+import IconOne from "public/images/footer-icon-one.svg";
+import IconTwo from "public/images/footer-icon-two.svg";
 
 // import Discord from "public/icons/discord.svg";
 // import Twitter from "public/icons/twitter.svg";
