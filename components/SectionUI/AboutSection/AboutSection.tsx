@@ -45,7 +45,7 @@ const data = [
 
 const AboutSection = () => {
   return (
-    <section className={styles.about_container}>
+    <section id="about-section" className={styles.about_container}>
       <div className="flex justify-center">
         <Title mainTitle="Tại sao nên lựa chọn Edgee mà không phải các nền tảng khác?" />
       </div>

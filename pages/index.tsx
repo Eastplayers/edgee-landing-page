@@ -14,6 +14,7 @@ import About from "components/SectionUI/AboutSection/AboutSection";
 // import CompetitionSection from "components/SectionUI/CompetitionSection/CompetitionSection";
 
 import styles from "styles/pages/Main.module.scss";
+import DifferenceSection from "components/SectionUI/DifferenceSection/DifferenceSection";
 
 const Home: NextPage = () => {
   return (
@@ -24,6 +25,7 @@ const Home: NextPage = () => {
       <IntroSection />
       <div className={styles.home_page}>
         <About />
+        <DifferenceSection />
       </div>
       <Footer />
     </>
