@@ -1,11 +1,16 @@
 @import "styles/variables.scss";
 
 .header_wrapper {
-  background: $neutral-700;
+  position: sticky;
+  top: 0;
+  z-index: 9998;
+  background-color: $neutral-700;
   backdrop-filter: blur(12px);
+  transition: all 0.3s ease-out;
 
   &_container {
     height: 100px;
+    transition: all 0.3s ease-out;
 
     max-width: $max-width;
     margin: auto;
@@ -64,6 +69,14 @@
       }
     }
   }
+
+  .header_sticky {
+    height: 70px;
+  }
+}
+
+.header_wrapper_sticky {
+  background-color: rgba(19, 22, 32, 0.8);
 }
 
 @media screen and (max-width: 900px) {

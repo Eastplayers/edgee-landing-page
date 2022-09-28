@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import classNames from "classnames";
 
 import MobileHeader from "components/MobileHeader/MobileHeader";
 import Button from "components/Button/Button";
@@ -14,6 +15,14 @@ import styles from "./Header.module.scss";
 const Header = () => {
   const router = useRouter();
   const [isOpen, setOpen] = useState<boolean>(false);
+  const [isSticky, setIsSticky] = useState("");
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleCheckIsSticky);
+    return () => {
+      window.removeEventListener("scroll", handleCheckIsSticky);
+    };
+  }, []);
 
   useEffect(() => {
     if (isOpen) {
@@ -23,10 +32,24 @@ const Header = () => {
     }
   }, [isOpen]);
 
+  const handleCheckIsSticky = () => {
+    const scrollTop = window.scrollY;
+    const stickyClass = scrollTop >= 100 ? "sticky" : "";
+    setIsSticky(stickyClass);
+  };
+
+  const headerStyle = classNames(styles.header_wrapper_container, {
+    [styles.header_sticky]: isSticky === "sticky",
+  });
+
+  const headerWrapperStyle = classNames(styles.header_wrapper, {
+    [styles.header_wrapper_sticky]: isSticky === "sticky",
+  });
+
   return (
     <>
-      <div className={styles.header_wrapper}>
-        <div className={styles.header_wrapper_container}>
+      <div className={headerWrapperStyle}>
+        <div className={headerStyle}>
           <div onClick={() => setOpen(true)} className="block lg:hidden">
             <Image src={MenuBar} alt="menuBar" width={30} height={30} />
           </div>
