@@ -1,0 +1,349 @@
+@import "styles/variables.scss";
+
+.collab_container {
+  max-width: $max-width;
+  margin: auto;
+  width: $section-width;
+
+  padding: 60px 0;
+
+  .diagram_wrapper {
+    display: flex;
+    justify-content: center;
+
+    &_container {
+      position: relative;
+      width: max-content;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      &_left {
+        grid-column: span 1 / span 1;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-right: -0.5rem;
+
+        .card_wrapper {
+          grid-column: span 2 / span 2;
+          display: flex;
+          flex-direction: column;
+          gap: 1.25rem;
+
+          &_container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 1rem;
+
+            .logo_icon {
+              border: 1px solid red;
+              width: 32px;
+              height: 32px;
+              border-radius: 12px;
+              background: $white;
+              transition: all 0.5s ease;
+
+              &:hover {
+                width: 40px;
+                height: 40px;
+              }
+            }
+
+            .card {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              gap: 0.75rem;
+              height: 88px;
+              width: 170px;
+              border-radius: 12px;
+              box-shadow: 0px 4px 32px rgba(54, 69, 148, 0.1);
+              background: $white;
+              order: 2;
+
+              .title {
+                color: $neutral-600;
+                font-size: $fs-xs;
+                line-height: $lh-xs;
+                font-weight: $fw-semibold;
+              }
+            }
+          }
+        }
+
+        .line_container {
+          grid-column: span 1 / span 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 1.25rem;
+        }
+      }
+
+      &_right {
+        grid-column: span 1 / span 1;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        .card_wrapper {
+          grid-column: span 2 / span 2;
+          display: flex;
+          flex-direction: column;
+          gap: 1.25rem;
+
+          &_container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1rem;
+
+            .logo_icon {
+              border: 1px solid red;
+              width: 32px;
+              height: 32px;
+              border-radius: 12px;
+              background: $white;
+              transition: all 0.5s ease;
+
+              &:hover {
+                width: 40px;
+                height: 40px;
+              }
+            }
+
+            .card {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              gap: 0.75rem;
+              height: 88px;
+              width: 170px;
+              border-radius: 12px;
+              box-shadow: 0px 4px 32px rgba(54, 69, 148, 0.1);
+              background: $white;
+
+              .title {
+                color: $neutral-600;
+                font-size: $fs-xs;
+                line-height: $lh-xs;
+                font-weight: $fw-semibold;
+              }
+            }
+          }
+        }
+
+        .line_container {
+          grid-column: span 1 / span 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 1.25rem;
+        }
+      }
+
+      .logo {
+        width: max-content;
+        padding: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: $primary-500;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background: $primary-500;
+          border-radius: 50%;
+          z-index: -1;
+        }
+
+        &::before {
+          animation: pulse 2s ease-out infinite;
+        }
+
+        &::after {
+          animation: pulse 2s 1s ease-out infinite;
+        }
+      }
+    }
+  }
+
+  @-webkit-keyframes pulse {
+    100% {
+      -webkit-transform: scale(2);
+    }
+  }
+
+  @keyframes pulse {
+    100% {
+      -moz-transform: scale(2);
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $big-tablet) {
+  .collab_container {
+    .diagram_wrapper {
+      &_container {
+        &_left {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+
+          .card_wrapper {
+            grid-column: span 3 / span 3;
+
+            &_container {
+              .logo_icon {
+                &:hover {
+                  width: 32px;
+                  height: 32px;
+                }
+              }
+
+              .card {
+                width: 140px;
+              }
+            }
+          }
+        }
+
+        &_right {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+
+          .card_wrapper {
+            grid-column: span 3 / span 3;
+
+            &_container {
+              .logo_icon {
+                &:hover {
+                  width: 32px;
+                  height: 32px;
+                }
+              }
+
+              .card {
+                width: 140px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .collab_container {
+    .diagram_wrapper {
+      &_container {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        width: 100%;
+        gap: 1rem;
+
+        &_left {
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+          margin-right: 0rem;
+
+          .card_wrapper {
+            grid-column: span 1 / span 1;
+
+            &_container {
+              flex-direction: row;
+              align-items: center;
+              justify-content: flex-start;
+
+              .logo_icon {
+                width: 42px;
+                height: 42px;
+              }
+
+              .card {
+                width: 200px;
+                height: 100px;
+                order: 1;
+                .title {
+                  font-size: $fs-base;
+                  line-height: $lh-base;
+                }
+              }
+            }
+          }
+
+          .line_container {
+            display: none;
+          }
+        }
+
+        &_right {
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+
+          .card_wrapper {
+            grid-column: span 1 / span 1;
+            &_container {
+              flex-direction: row;
+              align-items: center;
+
+              .logo_icon {
+                width: 42px;
+                height: 42px;
+              }
+
+              .card {
+                width: 200px;
+                height: 100px;
+                .title {
+                  font-size: $fs-base;
+                  line-height: $lh-base;
+                }
+              }
+            }
+          }
+          .line_container {
+            display: none;
+          }
+        }
+
+        .logo {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .collab_container {
+    .diagram_wrapper {
+      &_container {
+        &_left {
+          .card_wrapper {
+            &_container {
+              flex-direction: column;
+            }
+          }
+        }
+
+        &_right {
+          .card_wrapper {
+            &_container {
+              flex-direction: column;
+            }
+          }
+        }
+      }
+    }
+  }
+}

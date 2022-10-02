@@ -54,7 +54,7 @@ const AskingSection = () => {
   const [tabActive, setTabActive] = useState<string>("");
 
   return (
-    <section className={styles.asking_wrapper}>
+    <section id="asking-section" className={styles.asking_wrapper}>
       <div className="flex justify-center md:mb-10 mb-6">
         <Title mainTitle="Câu hỏi thường gặp" />
       </div>

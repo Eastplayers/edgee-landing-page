@@ -52,6 +52,7 @@ const MobileHeader = ({ active, close }: Props) => {
           <div
             className={styles.link}
             onClick={() => {
+              router.push("/#solution-section");
               close();
             }}
           >
@@ -60,6 +61,7 @@ const MobileHeader = ({ active, close }: Props) => {
           <div
             className={styles.link}
             onClick={() => {
+              router.push("/#asking-section");
               close();
             }}
           >
@@ -69,7 +71,10 @@ const MobileHeader = ({ active, close }: Props) => {
             <Button
               mainBtn={false}
               className="lg:hidden block w-full"
-              onClick={() => router.push("/#advise")}
+              onClick={() => {
+                router.push("/#advise");
+                close();
+              }}
             >
               Nhận tư vấn
             </Button>

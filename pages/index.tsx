@@ -5,6 +5,7 @@ import IntroSection from "components/SectionUI/IntroSection/IntroSection";
 import About from "components/SectionUI/AboutSection/AboutSection";
 import DifferenceSection from "components/SectionUI/DifferenceSection/DifferenceSection";
 import SolutionSection from "components/SectionUI/SolutionSection/SolutionSection";
+import CollabSection from "components/SectionUI/CollabSection/CollabSection";
 import AskingSection from "components/SectionUI/AskingSection/AskingSection";
 import Footer from "components/Footer/Footer";
 
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
         <About />
         <DifferenceSection />
         <SolutionSection />
+        <CollabSection />
         <AskingSection />
       </div>
       <Footer />

@@ -60,8 +60,18 @@ const Header = () => {
           </div>
           <div className={styles.nav_links}>
             <div className={styles.link}>Lợi ích</div>
-            <div className={styles.link}>Giải pháp</div>
-            <div className={styles.link}>Câu hỏi thường gặp</div>
+            <div
+              className={styles.link}
+              onClick={() => router.push("/#solution-section")}
+            >
+              Giải pháp
+            </div>
+            <div
+              className={styles.link}
+              onClick={() => router.push("/#asking-section")}
+            >
+              Câu hỏi thường gặp
+            </div>
           </div>
           <Button
             mainBtn={false}

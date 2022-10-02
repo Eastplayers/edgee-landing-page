@@ -12,7 +12,7 @@ import styles from "./SolutionSection.module.scss";
 
 const SolutionSection = () => {
   return (
-    <div className={styles.solution_wrapper}>
+    <section id="solution-section" className={styles.solution_wrapper}>
       <div className="flex justify-center lg:mb-14 mb-7">
         <Title mainTitle="Các giải pháp của Edgee" />
       </div>
@@ -20,7 +20,7 @@ const SolutionSection = () => {
       <SolutionEStore />
       <SolutionEApp />
       <SolutionECdp />
-    </div>
+    </section>
   );
 };
 
