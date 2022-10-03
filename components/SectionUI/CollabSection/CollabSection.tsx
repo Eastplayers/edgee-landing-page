@@ -6,9 +6,6 @@ import Logo from "public/icons/logo-white.svg";
 import VectorTopLeft from "public/icons/vector-top-left.svg";
 import VectorCenterLeft from "public/icons/vector-center-left.svg";
 import VectorBottomLeft from "public/icons/vector-bottom-left.svg";
-import VectorTopRight from "public/icons/vector-top-right.svg";
-import VectorCenterRight from "public/icons/vector-center-right.svg";
-import VectorBottomRight from "public/icons/vector-bottom-right.svg";
 
 import IconOneLeft from "public/images/collab/icon-one-left.svg";
 import IconTwoLeft from "public/images/collab/icon-two-left.svg";
@@ -29,10 +26,28 @@ import LogoNine from "public/images/collab/logos/logo-9.svg";
 import LogoTen from "public/images/collab/logos/logo-10.svg";
 import LogoEleven from "public/images/collab/logos/logo-11.svg";
 import LogoTwelve from "public/images/collab/logos/logo-12.svg";
+import LogoThirteen from "public/images/collab/logos/logo-13.svg";
+import LogoFourteen from "public/images/collab/logos/logo-14.svg";
+import LogoFifteen from "public/images/collab/logos/logo-15.svg";
+import LogoSixteen from "public/images/collab/logos/logo-16.svg";
+import LogoSeventeen from "public/images/collab/logos/logo-17.svg";
+import LogoEighteen from "public/images/collab/logos/logo-18.svg";
+import LogoNineteen from "public/images/collab/logos/logo-19.svg";
+import LogoTwenty from "public/images/collab/logos/logo-20.svg";
+import LogoTwentyOne from "public/images/collab/logos/logo-21.svg";
+import LogoTwentyTwo from "public/images/collab/logos/logo-22.svg";
 
 const OmnichannelSalesLogos = [LogoOne, LogoTwo, LogoThree, LogoFour, LogoFive];
 const OtherManagementPlatformLogos = [LogoSix, LogoSeven, LogoEight, LogoNine];
 const PaymentMethodsLogos = [LogoTen, LogoEleven, LogoTwelve];
+const ShippingUnitLogos = [LogoThirteen, LogoFourteen, LogoFifteen];
+const DataAnalysisLogos = [LogoSixteen, LogoSeventeen, LogoEighteen];
+const MarketingChannelLogos = [
+  LogoNineteen,
+  LogoTwenty,
+  LogoTwentyOne,
+  LogoTwentyTwo,
+];
 
 import styles from "./CollabSection.module.scss";
 
@@ -110,10 +125,12 @@ const CollabSection = () => {
                   <Image src={IconOneRight} />
                   <div className={styles.title}>Đơn vị vận chuyển</div>
                 </div>
-                <div className="flex gap-4">
-                  <div>1</div>
-                  <div>2</div>
-                  <div>3</div>
+                <div className="flex items-center md:gap-2 gap-3">
+                  {ShippingUnitLogos.map((item) => (
+                    <div className={styles.logo_icon}>
+                      <Image src={item} alt="logo" />
+                    </div>
+                  ))}
                 </div>
               </div>
               <div className={styles.card_wrapper_container}>
@@ -121,10 +138,12 @@ const CollabSection = () => {
                   <Image src={IconTwoRight} />
                   <div className={styles.title}>Data Analytics</div>
                 </div>
-                <div className="flex gap-4">
-                  <div>1</div>
-                  <div>2</div>
-                  <div>3</div>
+                <div className="flex items-center md:gap-2 gap-3">
+                  {DataAnalysisLogos.map((item) => (
+                    <div className={styles.logo_icon}>
+                      <Image src={item} alt="logo" />
+                    </div>
+                  ))}
                 </div>
               </div>
               <div className={styles.card_wrapper_container}>
@@ -132,10 +151,12 @@ const CollabSection = () => {
                   <Image src={IconThreeRight} />
                   <div className={styles.title}>Marketing channel</div>
                 </div>
-                <div className="flex gap-4">
-                  <div>1</div>
-                  <div>2</div>
-                  <div>3</div>
+                <div className="flex items-center md:gap-2 gap-3">
+                  {MarketingChannelLogos.map((item) => (
+                    <div className={styles.logo_icon}>
+                      <Image src={item} alt="logo" />
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

@@ -155,7 +155,7 @@ const Footer = () => {
 
           <motion.div
             animate={{ y: [0, -420, 0] }}
-            transition={{ duration: 10, repeat: Infinity }}
+            transition={{ duration: 30, repeat: Infinity }}
             className={styles.icon_one}
           >
             <Image src={IconOne} />
@@ -166,10 +166,10 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="absolute top-10 2xl:right-[620px] right-[50px] lg:block hidden">
+      <div className="absolute top-10 3xl:right-[620px] right-[50px] lg:block hidden">
         <motion.div
           animate={{ y: [0, 520, 0] }}
-          transition={{ duration: 10, repeat: Infinity }}
+          transition={{ duration: 30, repeat: Infinity }}
           className={styles.icon_two}
         >
           <Image src={IconTwo} />

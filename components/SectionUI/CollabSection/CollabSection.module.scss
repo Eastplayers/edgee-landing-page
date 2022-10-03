@@ -37,16 +37,30 @@
             gap: 1rem;
 
             .logo_icon {
-              border: 1px solid red;
               width: 32px;
               height: 32px;
-              border-radius: 12px;
+              box-shadow: 0px 3.63789px 29.1032px rgba(54, 69, 148, 0.1);
+              border-radius: 8px;
               background: $white;
               transition: all 0.5s ease;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              transition: all 0.3s ease;
+              overflow: hidden;
 
               &:hover {
                 width: 40px;
                 height: 40px;
+              }
+
+              &:hover {
+                span {
+                  img {
+                    width: 34px !important;
+                    height: 34px !important;
+                  }
+                }
               }
             }
 
@@ -101,16 +115,29 @@
             gap: 1rem;
 
             .logo_icon {
-              border: 1px solid red;
               width: 32px;
               height: 32px;
-              border-radius: 12px;
+              box-shadow: 0px 3.63789px 29.1032px rgba(54, 69, 148, 0.1);
+              border-radius: 8px;
               background: $white;
               transition: all 0.5s ease;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              overflow: hidden;
 
               &:hover {
                 width: 40px;
                 height: 40px;
+              }
+
+              &:hover {
+                span {
+                  img {
+                    width: 34px !important;
+                    height: 34px !important;
+                  }
+                }
               }
             }
 
@@ -266,8 +293,29 @@
               justify-content: flex-start;
 
               .logo_icon {
-                width: 42px;
-                height: 42px;
+                width: 50px;
+                height: 50px;
+
+                span {
+                  img {
+                    width: 35px !important;
+                    height: 35px !important;
+                  }
+                }
+
+                &:hover {
+                  width: 50px;
+                  height: 50px;
+                }
+
+                &:hover {
+                  span {
+                    img {
+                      width: 35px !important;
+                      height: 35px !important;
+                    }
+                  }
+                }
               }
 
               .card {
@@ -297,8 +345,29 @@
               align-items: center;
 
               .logo_icon {
-                width: 42px;
-                height: 42px;
+                width: 50px;
+                height: 50px;
+
+                span {
+                  img {
+                    width: 35px !important;
+                    height: 35px !important;
+                  }
+                }
+
+                &:hover {
+                  width: 50px;
+                  height: 50px;
+                }
+
+                &:hover {
+                  span {
+                    img {
+                      width: 35px !important;
+                      height: 35px !important;
+                    }
+                  }
+                }
               }
 
               .card {
@@ -332,6 +401,7 @@
           .card_wrapper {
             &_container {
               flex-direction: column;
+              gap: 0.5rem;
             }
           }
         }
@@ -340,6 +410,7 @@
           .card_wrapper {
             &_container {
               flex-direction: column;
+              gap: 0.5rem;
             }
           }
         }
