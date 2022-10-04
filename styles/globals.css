@@ -27,7 +27,15 @@ a {
 	background: #ff7a1a;
 }
 
+.slick-slide {
+  transform: scale(0.9)!important;
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import-normalize;
+
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";

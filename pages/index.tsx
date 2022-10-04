@@ -7,6 +7,7 @@ import DifferenceSection from "components/SectionUI/DifferenceSection/Difference
 import SolutionSection from "components/SectionUI/SolutionSection/SolutionSection";
 import CollabSection from "components/SectionUI/CollabSection/CollabSection";
 import AskingSection from "components/SectionUI/AskingSection/AskingSection";
+import CustomerTalkAboutSection from "components/SectionUI/CustomerTalkAboutSection/CustomerTalkAboutSection";
 import Footer from "components/Footer/Footer";
 
 import styles from "styles/pages/Main.module.scss";
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
         <DifferenceSection />
         <SolutionSection />
         <CollabSection />
+        <CustomerTalkAboutSection />
         <AskingSection />
       </div>
       <Footer />
