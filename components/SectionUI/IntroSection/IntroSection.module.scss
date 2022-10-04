@@ -1,7 +1,11 @@
 @import "styles/variables.scss";
 
 .intro_wrapper {
-  background: $neutral-700;
+  background-image: url("../../../public/images/intro-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -6.5rem;
+  padding-top: 6.5rem;
 
   &_container {
     max-width: $max-width;

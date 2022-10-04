@@ -1,7 +1,9 @@
 @import "styles/variables.scss";
 
 .difference_wrapper {
-  background: #f6faff;
+  background-image: url("../../../public/images/blue-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &_container {
     max-width: $max-width;
