@@ -1,5 +1,4 @@
 import axios, { AxiosRequestConfig } from "axios";
-import { USER_INFO } from "contexts/AuthContext";
 
 const EpServices = axios.create({
   baseURL: process.env.NEXT_PUBLIC_SERVICE_DOMAIN,
