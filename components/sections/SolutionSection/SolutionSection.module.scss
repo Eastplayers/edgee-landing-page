@@ -140,6 +140,9 @@
 
 @media screen and (max-width: $mobile) {
   .solution_wrapper {
+    &_content {
+      padding: 0 12px;
+    }
     &_btn {
       width: 100%;
     }

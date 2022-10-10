@@ -12,7 +12,7 @@ export default class MyDocument extends Document {
             crossOrigin="true"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap"
             rel="stylesheet"
           />
           <meta name="description" content="Edgee Landing Page" />

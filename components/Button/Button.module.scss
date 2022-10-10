@@ -44,7 +44,9 @@
 }
 
 @media screen and (max-width: $mobile) {
-  .btn_container {
+  .main_btn_container,
+  .second_btn_container,
+  .black_btn_container {
     width: 100%;
   }
 }

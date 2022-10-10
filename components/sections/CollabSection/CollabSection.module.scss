@@ -399,6 +399,8 @@
       &_container {
         &_left {
           .card_wrapper {
+            gap: 3rem;
+
             &_container {
               flex-direction: column;
               gap: 0.5rem;
@@ -408,6 +410,8 @@
 
         &_right {
           .card_wrapper {
+            gap: 3rem;
+
             &_container {
               flex-direction: column;
               gap: 0.5rem;

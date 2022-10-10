@@ -60,6 +60,7 @@ const DifferenceSection = () => {
               <div className="flex gap-2">
                 <Image src={Icon} alt="icon" />
                 <div>Sử dụng nền tảng Edgee xây kênh</div>
+                <div className={styles.shine} />
               </div>
             </div>
             <div className="flex items-center md:flex-row flex-col md:gap-0 gap-11 w-full justify-between">

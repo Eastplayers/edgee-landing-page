@@ -44,6 +44,7 @@ const MobileHeader = ({ active, close }: Props) => {
           <div
             className={styles.link}
             onClick={() => {
+              router.push("/#about-section");
               close();
             }}
           >

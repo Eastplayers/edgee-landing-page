@@ -59,7 +59,12 @@ const Header = () => {
             </div>
           </div>
           <div className={styles.nav_links}>
-            <div className={styles.link}>Lợi ích</div>
+            <div
+              className={styles.link}
+              onClick={() => router.push("/#about-section")}
+            >
+              Lợi ích
+            </div>
             <div
               className={styles.link}
               onClick={() => router.push("/#solution-section")}
