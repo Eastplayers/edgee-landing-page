@@ -18,6 +18,14 @@ const Header = () => {
   const [isSticky, setIsSticky] = useState("");
 
   useEffect(() => {
+    let lastScrollY = window.pageYOffset;
+
+    const handleCheckIsSticky = () => {
+      const scrollY = window.pageYOffset;
+      const direction = scrollY > lastScrollY ? "sticky" : "";
+      setIsSticky(direction);
+    };
+
     window.addEventListener("scroll", handleCheckIsSticky);
     return () => {
       window.removeEventListener("scroll", handleCheckIsSticky);
@@ -31,12 +39,6 @@ const Header = () => {
       document.body.style.overflow = "unset";
     }
   }, [isOpen]);
-
-  const handleCheckIsSticky = () => {
-    const scrollTop = window.scrollY;
-    const stickyClass = scrollTop >= 100 ? "sticky" : "";
-    setIsSticky(stickyClass);
-  };
 
   const headerStyle = classNames(styles.header_wrapper_container, {
     [styles.header_sticky]: isSticky === "sticky",
