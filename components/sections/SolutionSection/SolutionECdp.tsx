@@ -1,6 +1,7 @@
-import { useEffect, useRef } from "react";
+import { useEffect, createRef } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import lottie from "lottie-web";
 
 import Button from "components/Button/Button";
 
@@ -10,11 +11,21 @@ import styles from "./SolutionSection.module.scss";
 
 const SolutionECdp = () => {
   const router = useRouter();
+  const animationContainer = createRef<HTMLDivElement>();
 
-  const ref = useRef(null);
   useEffect(() => {
-    import("@dotlottie/player-component");
-  });
+    const currentAnimationContainer = animationContainer.current;
+    if (currentAnimationContainer) {
+      const anim = lottie.loadAnimation({
+        container: currentAnimationContainer,
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: "https://lottie.host/96a34dc9-3532-4c9e-bedd-067844d8ed0c/GyaYMpU1Z4.json",
+      });
+      return () => anim.destroy();
+    }
+  }, [animationContainer]);
 
   return (
     <section className={styles.solution_wrapper_e_cdp}>
@@ -24,15 +35,10 @@ const SolutionECdp = () => {
             <div className={styles.solution_wrapper_title}>E-CDP</div>
             <div className={styles.new_highlight}>
               <div className="absolute -top-[13px] -left-2">
-                <dotlottie-player
-                  ref={ref}
-                  src="https://lottie.host/96a34dc9-3532-4c9e-bedd-067844d8ed0c/GyaYMpU1Z4.json"
-                  autoplay
-                  loop
-                  style={{
-                    height: "55px",
-                    width: "55px",
-                  }}
+                <div
+                  style={{ width: "55px", height: "55px" }}
+                  className="animation-container"
+                  ref={animationContainer}
                 />
               </div>
               Mới ra mắt
