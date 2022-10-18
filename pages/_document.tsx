@@ -15,7 +15,10 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap"
             rel="stylesheet"
           />
-          <meta name="description" content="Edgee Landing Page" />
+          <meta
+            name="description"
+            content="Nhận tư vấn miễn phí từ đội ngũ chuyên gia chuyển đổi số Edgee"
+          />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>
