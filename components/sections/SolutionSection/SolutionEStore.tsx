@@ -1,9 +1,15 @@
+import { useRouter } from "next/router";
 import Image from "next/image";
+
 import Button from "components/Button/Button";
+
 import AppImage from "public/images/e-store.svg";
+
 import styles from "./SolutionSection.module.scss";
 
 const SolutionEStore = () => {
+  const router = useRouter();
+
   return (
     <section className={styles.solution_wrapper_e_store}>
       <div className={styles.container}>
@@ -32,8 +38,12 @@ const SolutionEStore = () => {
               </li>
             </ul>
           </div>
-          <Button mainBtn={false} className={styles.solution_wrapper_btn}>
-            Dùng thử miễn phí
+          <Button
+            mainBtn={false}
+            className={styles.solution_wrapper_btn}
+            onClick={() => router.push("/#advise")}
+          >
+            Tư vấn miễn phí
           </Button>
         </div>
         <div className="lg:order-2 order-1">

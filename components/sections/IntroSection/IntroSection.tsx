@@ -15,10 +15,11 @@ const IntroSection = () => {
         <div className="flex lg:flex-row flex-col justify-between gap-10">
           <div className="lg:w-[670px] w-full flex flex-col items-start justify-center gap-8">
             <div className={styles.main_title}>
-              Sự cao cấp cho việc phát triển kênh thương mại điện tử
+              Hỗ trợ chuyển đổi số toàn diện. Gia tăng lợi thế cạnh tranh bền
+              vững.
             </div>
             <Button className="md:w-max w-full text-white hover:text-black">
-              Đăng kí nhận demo miễn phí
+              Tu vấn miễn phí
             </Button>
           </div>
           <div className="relative">

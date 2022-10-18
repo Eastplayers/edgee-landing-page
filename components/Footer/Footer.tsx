@@ -40,11 +40,29 @@ const Footer = () => {
     reset,
   } = useForm<IFormData>();
   const [showModal, setShowModal] = useState<boolean>(false);
+  const [isSuccess, setIsSuccess] = useState<boolean>(false);
+  const scriptUrl =
+    "https://script.google.com/macros/s/AKfycbyejGULXpSNW0mtvXuHhRufcufUgyJNZFmXSPc3oONyj_A426cNB7_drve-VNjxLajI/exec";
 
-  const onSubmit = handleSubmit(async (data) => {
-    console.log("form data: ", data);
-    reset();
-    setShowModal(true);
+  const onSubmit = handleSubmit((data) => {
+    console.log(data);
+    fetch(scriptUrl, {
+      method: "POST",
+      body: JSON.stringify(data),
+    })
+      .then((res) => {
+        console.log("res: ", res);
+        setIsSuccess(true);
+        setShowModal(true);
+      })
+      .catch((err) => {
+        console.log("err: ", err);
+        setIsSuccess(false);
+        setShowModal(true);
+      })
+      .finally(() => {
+        reset();
+      });
   });
 
   return (
@@ -184,7 +202,7 @@ const Footer = () => {
       <AnimatePresence initial={false} exitBeforeEnter={true}>
         <Modal
           showModal={showModal}
-          isSuccess={true}
+          isSuccess={isSuccess}
           closeModal={() => setShowModal(!showModal)}
         />
       </AnimatePresence>

@@ -1,14 +1,43 @@
+import { useEffect, useRef } from "react";
+import { useRouter } from "next/router";
 import Image from "next/image";
+
 import Button from "components/Button/Button";
+
 import AppImage from "public/images/e-cdp.svg";
+
 import styles from "./SolutionSection.module.scss";
 
 const SolutionECdp = () => {
+  const router = useRouter();
+
+  const ref = useRef(null);
+  useEffect(() => {
+    import("@dotlottie/player-component");
+  });
+
   return (
     <section className={styles.solution_wrapper_e_cdp}>
       <div className={styles.container}>
         <div className="flex flex-col gap-3 lg:w-[500px] w-full lg:order-1 order-2">
-          <div className={styles.solution_wrapper_title}>E-CDP</div>
+          <div className="flex items-center gap-4">
+            <div className={styles.solution_wrapper_title}>E-CDP</div>
+            <div className={styles.new_highlight}>
+              <div className="absolute -top-[13px] -left-2">
+                <dotlottie-player
+                  ref={ref}
+                  src="https://lottie.host/96a34dc9-3532-4c9e-bedd-067844d8ed0c/GyaYMpU1Z4.json"
+                  autoplay
+                  loop
+                  style={{
+                    height: "55px",
+                    width: "55px",
+                  }}
+                />
+              </div>
+              Mới ra mắt
+            </div>
+          </div>
           <div className={styles.solution_wrapper_sub_title}>
             Nền tảng dữ liệu khách hàng giúp DN thấu hiểu theo thời gian thực
           </div>
@@ -30,8 +59,12 @@ const SolutionECdp = () => {
               <li>Hiểu hơn về doanh nghiệp và khách hàng </li>
             </ul>
           </div>
-          <Button mainBtn={false} className={styles.solution_wrapper_btn}>
-            Dùng thử miễn phí
+          <Button
+            mainBtn={false}
+            className={styles.solution_wrapper_btn}
+            onClick={() => router.push("/#advise")}
+          >
+            Tư vấn miễn phí
           </Button>
         </div>
         <div className="lg:order-2 order-1">

@@ -8,7 +8,6 @@ import Button from "components/Button/Button";
 
 import logoIcon from "public/images/logo.svg";
 import MenuBar from "public/icons/menu-bar.svg";
-// import User from "public/icons/user.svg";
 
 import styles from "./Header.module.scss";
 
@@ -82,10 +81,10 @@ const Header = () => {
           </div>
           <Button
             mainBtn={false}
-            className="w-[140px] md:ml-11 ml-0 lg:block hidden"
+            className="w-[150px] md:ml-11 ml-0 lg:block hidden"
             onClick={() => router.push("/#advise")}
           >
-            Nhận tư vấn
+            Nhận tư vấn ngay
           </Button>
         </div>
       </div>
