@@ -3,6 +3,7 @@ import Image from "next/image";
 import classNames from "classnames";
 import { motion, AnimatePresence } from "framer-motion";
 import { useForm } from "react-hook-form";
+import moment from "moment";
 
 import Button from "components/Button/Button";
 import Modal from "components/Modal/Modal";
@@ -13,20 +14,11 @@ import Phone from "public/icons/phone.svg";
 import IconOne from "public/images/footer-icon-one.svg";
 import IconTwo from "public/images/footer-icon-two.svg";
 
-// import Discord from "public/icons/discord.svg";
-// import Twitter from "public/icons/twitter.svg";
-// import Telegram from "public/icons/telegram.svg";
-// import LinkedIn from "public/icons/linkedIn.svg";
-// import ArrowUpRightWhite from "public/icons/arrow-up-right-white.svg";
-// import Visa from "public/icons/logo_visa.svg";
-// import MasterCard from "public/icons/logo_masterCard.svg";
-// import PCJ from "public/icons/logo_pcj.svg";
-
 import styles from "./Footer.module.scss";
 
 interface IFormData {
   name: string;
-  phone: number;
+  phone: string;
   email: string;
   description: string;
 }
@@ -41,28 +33,36 @@ const Footer = () => {
   } = useForm<IFormData>();
   const [showModal, setShowModal] = useState<boolean>(false);
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
-  const scriptUrl =
-    "https://script.google.com/macros/s/AKfycbyejGULXpSNW0mtvXuHhRufcufUgyJNZFmXSPc3oONyj_A426cNB7_drve-VNjxLajI/exec";
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const onSubmit = handleSubmit((data) => {
-    console.log(data);
-    fetch(scriptUrl, {
-      method: "POST",
-      body: JSON.stringify(data),
-    })
-      .then((res) => {
-        console.log("res: ", res);
-        setIsSuccess(true);
-        setShowModal(true);
-      })
-      .catch((err) => {
-        console.log("err: ", err);
-        setIsSuccess(false);
-        setShowModal(true);
-      })
-      .finally(() => {
-        reset();
+  const onSubmit = handleSubmit(async (data) => {
+    const dataForm = {
+      ...data,
+      date: moment().format("MMMM Do YYYY, h:mm:ss a"),
+    };
+
+    try {
+      setIsLoading(true);
+      const response = await fetch("/api/submit", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dataForm),
       });
+
+      const content = await response.json();
+      alert(content.data.tableRange);
+
+      reset();
+      setIsSuccess(true);
+    } catch (e) {
+      setIsSuccess(false);
+    } finally {
+      setShowModal(true);
+      setIsLoading(false);
+    }
   });
 
   return (
@@ -126,10 +126,9 @@ const Footer = () => {
               <div className={styles.form_item}>
                 <input
                   {...register("phone", {
-                    valueAsNumber: true,
                     required: "Vui lòng điền số điện thoại",
                   })}
-                  type="number"
+                  type="text"
                   name="phone"
                   placeholder="Số điện thoại"
                 />
@@ -173,7 +172,9 @@ const Footer = () => {
                 )}
               </div>
 
-              <Button type="submit">Tư vấn ngay</Button>
+              <Button type="submit">
+                {isLoading ? "Chờ..." : "Tư vấn ngay"}
+              </Button>
             </form>
 
             <motion.div
