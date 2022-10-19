@@ -51,10 +51,6 @@ const Footer = () => {
         },
         body: JSON.stringify(dataForm),
       });
-
-      const content = await response.json();
-      alert(content.data.tableRange);
-
       reset();
       setIsSuccess(true);
     } catch (e) {
@@ -70,9 +66,12 @@ const Footer = () => {
       <section id="advise" className={styles.footer_wrapper}>
         <div className={styles.footer_wrapper_container}>
           <div className={styles.footer_wrapper_container_social}>
-            <div className={styles.title}>Đăng ký nhận demo miễn phí</div>
+            <div className={styles.title}>
+              Nhận tư vấn miễn phí từ đội ngũ chuyên gia chuyển đổi số Edgee
+            </div>
             <div className={styles.text}>
-              Nhân viên Edgee sẽ sớm phản hồi lại bạn!
+              Chúng tôi sẽ nhanh chóng liên hệ quý doanh nghiệp sau khi nhận
+              thông tin đăng ký!
             </div>
             <div className="flex gap-6">
               <a

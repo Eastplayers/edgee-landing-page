@@ -24,7 +24,7 @@ const Home: NextPage = () => {
         <DifferenceSection />
         <SolutionSection />
         <CollabSection />
-        <CustomerTalkAboutSection />
+        {/* <CustomerTalkAboutSection /> */}
         <AskingSection />
       </div>
       <Footer />

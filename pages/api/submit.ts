@@ -32,8 +32,10 @@ export default async function handler(
       ]
     })
 
+    const authClient = await auth.getClient();
+
     const sheets = google.sheets({
-      auth,
+      auth: authClient,
       version: 'v4'
     });
 
@@ -54,5 +56,4 @@ export default async function handler(
   } catch (e: any) {
     return res.status(e.code).send({ message: e.message })
   }
-
 }
