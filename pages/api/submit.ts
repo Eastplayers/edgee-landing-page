@@ -20,44 +20,38 @@ export default async function handler(
   const body = req.body as SheetForm
 
   try {
-    // const auth = new google.auth.GoogleAuth({
-    //   credentials: {
-    //     client_email: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL,
-    //     private_key: process.env.NEXT_PUBLIC_GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n')
-    //   },
-    //   scopes: [
-    //     'https://www.googleapis.com/auth/drive',
-    //     'https://www.googleapis.com/auth/drive.file',
-    //     'https://www.googleapis.com/auth/spreadsheets'
-    //   ]
-    // })
+    const auth = new google.auth.GoogleAuth({
+      credentials: {
+        client_email: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL,
+        private_key: process.env.NEXT_PUBLIC_GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n')
+      },
+      scopes: [
+        'https://www.googleapis.com/auth/drive',
+        'https://www.googleapis.com/auth/drive.file',
+        'https://www.googleapis.com/auth/spreadsheets'
+      ]
+    })
 
-    // const authClient = await auth.getClient();
+    const authClient = await auth.getClient();
 
-    // const sheets = google.sheets({
-    //   auth: authClient,
-    //   version: 'v4'
-    // });
+    const sheets = google.sheets({
+      auth: authClient,
+      version: 'v4'
+    });
 
-    // const response = await sheets.spreadsheets.values.append({
-    //   spreadsheetId: process.env.NEXT_PUBLIC_GOOGLE_SHEET_ID,
-    //   range: 'A1:E1',
-    //   valueInputOption: 'USER_ENTERED',
-    //   requestBody: {
-    //     values: [
-    //       [body.date, body.name, body.email, body.phone, body.description]
-    //     ]
-    //   }
-    // });
-
-
+    const response = await sheets.spreadsheets.values.append({
+      spreadsheetId: process.env.NEXT_PUBLIC_GOOGLE_SHEET_ID,
+      range: 'A1:E1',
+      valueInputOption: 'USER_ENTERED',
+      requestBody: {
+        values: [
+          [body.date, body.name, body.email, body.phone, body.description]
+        ]
+      }
+    });
 
     return res.status(201).json({
-      data: {
-        NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL,
-        NEXT_PUBLIC_GOOGLE_PRIVATE_KEY: process.env.NEXT_PUBLIC_GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
-        NEXT_PUBLIC_GOOGLE_SHEET_ID: process.env.NEXT_PUBLIC_GOOGLE_SHEET_ID
-      }
+      data: response.data
     })
   } catch (e: any) {
     return res.status(e.code).send({ message: e.message })
