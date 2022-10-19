@@ -45,24 +45,30 @@ const SolutionECdp = () => {
             </div>
           </div>
           <div className={styles.solution_wrapper_sub_title}>
-            Nền tảng dữ liệu khách hàng giúp DN thấu hiểu theo thời gian thực
+            Nền tảng dữ liệu khách hàng giúp doanh nghiệp thấu hiểu từng khách
+            hàng
           </div>
           <div className={styles.solution_wrapper_content}>
             <div>
-              E-Omni là giải pháp quản lý bán hàng đa kênh toàn diện. Khách hàng
-              ngay lập tức sở hữu một hệ thống quản lý bán hàng online đầy đủ,
-              vận hành ổn định và hiệu quả.
+              E-CDP là một giải pháp đồng nhất dữ liệu khách hàng, giúp doanh
+              nghiệp tạo ra các chiến dịch marketing mang tính cá nhân hoá và
+              xuyên suốt trên các nền tảng.
             </div>
             <ul>
               <li>
-                Giúp doanh nghiệp nhanh chóng sở hữu một nền tảng kinh doanh
-                online vận hành ổn định và hiệu quả.
+                Cho phép doanh nghiệp thu thập và lưu trữ tất cả các tương tác
+                của khách hàng trên đa kênh
               </li>
               <li>
-                Cung cấp đầy đủ công cụ, giải pháp kinh doanh online cho doanh
-                nghiệp trong một hệ thống duy nhất.{" "}
+                Thấu hiểu khách hàng qua phân tích chân dung khách hàng 360 độ
               </li>
-              <li>Hiểu hơn về doanh nghiệp và khách hàng </li>
+              <li>
+                Nâng cao trải nghiệm khách hàng đối với doanh nghiệp trên tất cả
+                các touch point
+              </li>
+              <li>
+                Hợp nhất tất cả các tool Marketing đang sử dụng về một nền tảng
+              </li>
             </ul>
           </div>
           <Button

@@ -81,7 +81,7 @@ const Header = () => {
           </div>
           <Button
             mainBtn={false}
-            className="w-[150px] md:ml-11 ml-0 lg:block hidden"
+            className="w-[160px] md:ml-11 ml-0 lg:block hidden"
             onClick={() => router.push("/#advise")}
           >
             Nhận tư vấn ngay

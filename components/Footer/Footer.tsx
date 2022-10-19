@@ -8,8 +8,6 @@ import moment from "moment";
 import Button from "components/Button/Button";
 import Modal from "components/Modal/Modal";
 
-import Facebook from "public/icons/facebook.svg";
-import Youtube from "public/icons/youtube.svg";
 import Phone from "public/icons/phone.svg";
 import IconOne from "public/images/footer-icon-one.svg";
 import IconTwo from "public/images/footer-icon-two.svg";
@@ -54,6 +52,7 @@ const Footer = () => {
       reset();
       setIsSuccess(true);
     } catch (e) {
+      console.error(e);
       setIsSuccess(false);
     } finally {
       setShowModal(true);
@@ -74,32 +73,15 @@ const Footer = () => {
               thông tin đăng ký!
             </div>
             <div className="flex gap-6">
-              <a
-                href=""
-                target="_blank"
-                rel="noreferrer"
-                className={classNames(styles.social_icon, styles.social)}
-              >
-                <Image src={Facebook} alt="Facebook" />
-              </a>
-              <a
-                href=""
-                target="_blank"
-                rel="noreferrer"
-                className={classNames(styles.social_icon, styles.social)}
-              >
-                <Image src={Youtube} alt="Youtube" />
-              </a>
               <div className="flex items-center gap-2">
                 <a
-                  href=""
-                  target="_blank"
+                  href="tel:090 526 86 74"
                   rel="noreferrer"
                   className={classNames(styles.social_icon, styles.phone)}
                 >
                   <Image src={Phone} alt="Phone" />
                 </a>
-                <div className={styles.phone_number}>1900545415</div>
+                <div className={styles.phone_number}>0905268674</div>
               </div>
             </div>
           </div>
@@ -142,33 +124,20 @@ const Footer = () => {
                 <input
                   {...register("email", {
                     pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                    required: "Vui lòng điền email",
                   })}
                   type="email"
                   name="email"
                   placeholder="Email"
                 />
-                {errors.email && (
-                  <span className="text-red-500 text-xs">
-                    {errors.email.message}
-                  </span>
-                )}
               </div>
 
               <div className={styles.form_item}>
                 <textarea
-                  {...register("description", {
-                    required: "Vui lòng điền nội dung yêu cầu",
-                  })}
+                  {...register("description")}
                   rows={4}
                   name="description"
                   placeholder="Nội dung yêu cầu"
                 />
-                {errors.description && (
-                  <span className="text-red-500 text-xs">
-                    {errors.description.message}
-                  </span>
-                )}
               </div>
 
               <Button type="submit">
