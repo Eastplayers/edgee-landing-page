@@ -41,7 +41,7 @@ const SolutionECdp = () => {
                   ref={animationContainer}
                 />
               </div>
-              Mới ra mắt
+              Sắp ra mắt
             </div>
           </div>
           <div className={styles.solution_wrapper_sub_title}>
