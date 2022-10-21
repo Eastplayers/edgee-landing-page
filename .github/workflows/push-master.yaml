@@ -1,0 +1,25 @@
+name: Deploy Edgee FE
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    env:
+      EDGEE_ENV: ${{ secrets.EDGEE_ENV }}
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Inject env
+        run: echo "$EDGEE_ENV" > .env
+        shell: bash
+
+      - name: Run build
+        run: docker-compose build
+
+      - name: Run up
+        run: docker-compose up -d
