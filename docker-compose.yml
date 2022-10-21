@@ -2,8 +2,8 @@ version: '3.9'
 
 services:
 
-  tribes-fe:
-    container_name: tribes-fe
+  edgee-fe:
+    container_name: edgee-fe
     build:
       context: .
       dockerfile: deployment/Dockerfile
