@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+
+  :
+    container_name: edgee-landing-page
+    build:
+      context: .
+      dockerfile: deployment/Dockerfile
+    restart: unless-stopped
+    ports:
+      - '3000:3000'
