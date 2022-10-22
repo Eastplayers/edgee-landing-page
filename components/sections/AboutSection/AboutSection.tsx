@@ -14,8 +14,8 @@ const AboutSection = () => {
       <div className="flex justify-center">
         <Title mainTitle="Tại sao nên lựa chọn nền tảng Edgee?" />
       </div>
-      <div className="flex xl:flex-row flex-col justify-between gap-16">
-        <div className="flex md:flex-row flex-col gap-10">
+      <div className="grid xl:grid-cols-2 grid-cols-1 gap-16">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-16">
           {data.slice(0, 2).map((item) => {
             return (
               <div className={styles.about_card_container}>
@@ -28,7 +28,7 @@ const AboutSection = () => {
             );
           })}
         </div>
-        <div className="flex md:flex-row flex-col gap-10">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-16">
           {data.slice(-2).map((item) => {
             return (
               <div className={styles.about_card_container}>

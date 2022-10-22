@@ -16,7 +16,7 @@ const IntroSection = () => {
     <div className={styles.intro_wrapper}>
       <div className={styles.intro_wrapper_container}>
         <div className="flex lg:flex-row flex-col justify-between gap-10">
-          <div className="lg:w-[670px] w-full flex flex-col items-start justify-center gap-8">
+          <div className="lg:w-[730px] w-full flex flex-col items-start justify-center gap-8">
             <div className={styles.main_title}>
               Hỗ trợ chuyển đổi số toàn diện. Gia tăng lợi thế cạnh tranh bền
               vững.
@@ -31,7 +31,7 @@ const IntroSection = () => {
           <div className="relative">
             <Image src={IntroImage} alt="image" />
             <motion.div
-              animate={{ y: [0, 40, 0] }}
+              animate={{ y: [0, 30, 0] }}
               transition={{ duration: 3, repeat: Infinity }}
               className={styles.icon}
             >
