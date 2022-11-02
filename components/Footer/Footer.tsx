@@ -95,7 +95,7 @@ const Footer = () => {
                   })}
                   type="text"
                   name="name"
-                  placeholder="Họ và tên"
+                  placeholder="Họ và tên*"
                 />
                 {errors.name && (
                   <span className="text-red-500 text-xs">
@@ -111,7 +111,7 @@ const Footer = () => {
                   })}
                   type="text"
                   name="phone"
-                  placeholder="Số điện thoại"
+                  placeholder="Số điện thoại*"
                 />
                 {errors.phone && (
                   <span className="text-red-500 text-xs">
