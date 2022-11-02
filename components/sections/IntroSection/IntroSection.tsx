@@ -25,7 +25,7 @@ const IntroSection = () => {
               className="md:w-max w-full text-white hover:text-black"
               onClick={() => router.push("/#advise")}
             >
-              Tu vấn miễn phí
+              Tư vấn miễn phí
             </Button>
           </div>
           <div className="relative">
