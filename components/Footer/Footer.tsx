@@ -141,7 +141,7 @@ const Footer = () => {
               </div>
 
               <Button type="submit">
-                {isLoading ? "Chờ..." : "Tư vấn ngay"}
+                {isLoading ? "Chờ..." : "Đăng ký ngay"}
               </Button>
             </form>
 
