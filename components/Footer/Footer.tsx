@@ -107,7 +107,10 @@ const Footer = () => {
               <div className={styles.form_item}>
                 <input
                   {...register("phone", {
+                    pattern: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/,
                     required: "Vui lòng điền số điện thoại",
+                    maxLength: 11,
+                    minLength: 10,
                   })}
                   type="text"
                   name="phone"
