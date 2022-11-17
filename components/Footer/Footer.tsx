@@ -112,7 +112,7 @@ const Footer = () => {
                     maxLength: 11,
                     minLength: 10,
                   })}
-                  type="text"
+                  type="number"
                   name="phone"
                   placeholder="Số điện thoại*"
                 />
