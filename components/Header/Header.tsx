@@ -60,31 +60,21 @@ const Header = () => {
             </div>
           </div>
           <div className={styles.nav_links}>
-            <div
-              className={styles.link}
-              onClick={() => router.push("/#about-section")}
-            >
+            <a href="#about" className={styles.link}>
               Lợi ích
-            </div>
-            <div
-              className={styles.link}
-              onClick={() => router.push("/#solution-section")}
-            >
+            </a>
+            <a href="#solution" className={styles.link}>
               Giải pháp
-            </div>
-            <div
-              className={styles.link}
-              onClick={() => router.push("/#asking-section")}
-            >
+            </a>
+            <a href="#faq" className={styles.link}>
               Câu hỏi thường gặp
-            </div>
+            </a>
           </div>
           <Button
             mainBtn={false}
             className="w-[160px] md:ml-11 ml-0 lg:block hidden"
-            onClick={() => router.push("/#advise")}
           >
-            Nhận tư vấn ngay
+            <a href="#advise">Nhận tư vấn ngay</a>
           </Button>
         </div>
       </div>

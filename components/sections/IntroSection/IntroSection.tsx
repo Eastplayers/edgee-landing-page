@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useRouter } from "next/router";
 
 import Button from "components/Button/Button";
 
@@ -10,8 +9,6 @@ import IntroIcon from "public/icons/intro-icon.svg";
 import styles from "./IntroSection.module.scss";
 
 const IntroSection = () => {
-  const router = useRouter();
-
   return (
     <div className={styles.intro_wrapper}>
       <div className={styles.intro_wrapper_container}>
@@ -21,11 +18,8 @@ const IntroSection = () => {
               Hỗ trợ chuyển đổi số toàn diện. Gia tăng lợi thế cạnh tranh bền
               vững.
             </div>
-            <Button
-              className="md:w-max w-full text-white hover:text-black"
-              onClick={() => router.push("/#advise")}
-            >
-              Tư Vấn Miễn Phí
+            <Button className="md:w-max w-full text-white hover:text-black">
+              <a href="#advise">Tư Vấn Miễn Phí</a>
             </Button>
           </div>
           <div className="relative">

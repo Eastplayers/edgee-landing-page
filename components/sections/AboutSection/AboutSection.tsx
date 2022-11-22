@@ -10,7 +10,7 @@ import styles from "./AboutSection.module.scss";
 
 const AboutSection = () => {
   return (
-    <section id="about-section" className={styles.about_container}>
+    <section id="about" className={styles.about_container}>
       <div className="flex justify-center">
         <Title mainTitle="Tại sao nên lựa chọn nền tảng Edgee?" />
       </div>
