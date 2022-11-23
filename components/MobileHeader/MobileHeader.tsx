@@ -57,15 +57,17 @@ const MobileHeader = ({ active, close }: Props) => {
             Câu hỏi thường gặp
           </a>
           <div className="px-7">
-            <Button
-              mainBtn={false}
-              className="lg:hidden block w-full"
-              onClick={() => {
-                close();
-              }}
-            >
-              <a href="#advise">Nhận tư vấn ngay</a>
-            </Button>
+            <a href="#advise">
+              <Button
+                mainBtn={false}
+                className="lg:hidden block w-full"
+                onClick={() => {
+                  close();
+                }}
+              >
+                Nhận tư vấn ngay
+              </Button>
+            </a>
           </div>
         </div>
       </div>

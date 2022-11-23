@@ -18,9 +18,11 @@ const IntroSection = () => {
               Hỗ trợ chuyển đổi số toàn diện. Gia tăng lợi thế cạnh tranh bền
               vững.
             </div>
-            <Button className="md:w-max w-full text-white hover:text-black">
-              <a href="#advise">Tư Vấn Miễn Phí</a>
-            </Button>
+            <a href="#advise">
+              <Button className="md:w-max w-full text-white hover:text-black">
+                Tư Vấn Miễn Phí
+              </Button>
+            </a>
           </div>
           <div className="relative">
             <Image src={IntroImage} alt="image" />

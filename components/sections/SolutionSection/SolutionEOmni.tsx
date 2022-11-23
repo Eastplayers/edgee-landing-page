@@ -36,13 +36,11 @@ const SolutionEOmni = () => {
             <li>Hiểu hơn về doanh nghiệp và khách hàng</li>
           </ul>
         </div>
-        <Button
-          mainBtn={false}
-          className={styles.solution_wrapper_btn}
-          onClick={() => router.push("/#advise")}
-        >
-          Tư vấn miễn phí
-        </Button>
+        <a href="#advise">
+          <Button mainBtn={false} className={styles.solution_wrapper_btn}>
+            Tư vấn miễn phí
+          </Button>
+        </a>
       </div>
     </section>
   );

@@ -38,13 +38,11 @@ const SolutionEStore = () => {
               </li>
             </ul>
           </div>
-          <Button
-            mainBtn={false}
-            className={styles.solution_wrapper_btn}
-            onClick={() => router.push("/#advise")}
-          >
-            Tư vấn miễn phí
-          </Button>
+          <a href="#advise">
+            <Button mainBtn={false} className={styles.solution_wrapper_btn}>
+              Tư vấn miễn phí
+            </Button>
+          </a>
         </div>
         <div className="lg:order-2 order-1">
           <Image src={AppImage} alt="E-Store" />

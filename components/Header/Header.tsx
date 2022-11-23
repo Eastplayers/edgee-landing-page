@@ -70,12 +70,14 @@ const Header = () => {
               Câu hỏi thường gặp
             </a>
           </div>
-          <Button
-            mainBtn={false}
-            className="w-[160px] md:ml-11 ml-0 lg:block hidden"
-          >
-            <a href="#advise">Nhận tư vấn ngay</a>
-          </Button>
+          <a href="#advise">
+            <Button
+              mainBtn={false}
+              className="w-[160px] md:ml-11 ml-0 lg:block hidden"
+            >
+              Nhận tư vấn ngay
+            </Button>
+          </a>
         </div>
       </div>
       <MobileHeader active={isOpen} close={() => setOpen(false)} />
